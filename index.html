@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Happy Birthday</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color:rgb(227, 238, 248);
+    }
+
+    .main {
+      width: 90vw;
+      max-width: 600px;
+      height: 92%;
+      background-color: rgb(240, 247, 247);
+      border-radius: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      
+      /* margin-bottom: 50px; */
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: 700;
+      font-size: 10vw;
+      margin: 0;
+      margin-bottom: 1rem;
+      padding: 0 ;
+      
+    }
+
+    .contain {
+      width: 100%;
+      height: 100%;
+      /* background-color: rgb(192, 122, 122); */
+      border-radius: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    swiper-container {
+      width: 90%;
+      height: 70vh;
+      max-height: 550px;
+      border-radius: 18px;
+    }
+
+    swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    span{
+      font-size: 3vw;
+      padding: 0;
+      margin: 0;
+      position: relative;
+      bottom: 20px;
+      color: rgb(184, 184, 176);
+    }
+    hr{
+      padding: 0;
+      margin: 0;
+    }
+    .emoji{
+      width: 60%;
+      height: 60%;
+      object-fit: contain;
+      position: relative;
+      /* bottom: 100px; */
+
+
+    }
+    .bg{
+      background-color: beige;
+      flex-direction: column;
+      
+    }
+    .msgs{
+      color: rgb(129, 130, 131);
+    }
+    .emo{
+      /* width: 60%;
+      height: 60%; */
+      /* object-fit: fill; */
+      background-color:rgb(233, 186, 186);
+      position: relative;
+      bottom: -30px;
+      border-top-left-radius: 7rem;
+      border-top-right-radius: rem;
+    }
+    .bt{
+      background-color:rgb(245, 235, 235) ;
+    }
+    .bday{
+      color: rgb(199, 199, 160);
+      font-size: 30px;
+    }
+    .all{
+      object-fit: contain;
+      width: 80%;
+      position: relative;
+      /* top: -0px; */
+     
+     
+      
+    }
+    .nexts{
+      flex-direction: column;
+      
+      
+    }
+    .pickup{
+      padding:20px;
+      margin: 0;
+      position: relative;
+      /* bottom: 80px; */
+      font-size: 13px;
+      color: rgb(243, 243, 228);
+      background-color:rgb(235, 187, 187);
+      border-radius: 5px;
+      height: 250px;
+font-family: monospace;
+border-top-right-radius: 2rem;
+/* border-bottom-left-radius: 5rem; */
+border-top-left-radius: 2rem;
+padding-top: 50px;
+      
+
+    }
+    .new{
+      
+    }
+    video{
+      width: 100%;
+      height:100%;
+      object-fit: cover;
+    }
+    audio{
+      width: 40%;
+      max-width: 40%;
+      padding: 0;
+      margin: 0;
+     
+      
+    }
+    hr{
+      margin: 0;
+      padding: 0;
+      position: relative;
+      bottom:20px;
+    }
+    .background{
+      /* background: rgb(255, 253, 253); */
+      
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 10px;
+      background: url(./gifs/stars.gif)  ;
+      object-fit: fill;
+      background-position-y: top;
+      /* background-position-x: right; */
+      background-repeat: repeat-x;
+      background-size: contain;
+      /* background-repeat: round; */
+      /* background-repeat: space; */
+      
+    
+      
+    }
+    .middle{
+      border-radius: 50%;
+      /* border: 1px solid red; */
+      display: flex;
+      /* flex-direction: column; */
+      justify-content: center;
+      align-items: center;
+      width: 78.5%;
+      height: 47.5%;
+      /* background-color: beige; */
+      margin-top: 20px;
+      box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);  
+      border: none;
+   
+    
+    }
+    .mids{
+flex-direction: column;
+/* box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38); */
+/* border-radius: 70%; */
+width: 100%;
+height: 100%;
+border-radius: 50%;
+
+/* box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);   */
+
+    }
+    .timt{
+      color:black;
+     font-size: 15px;
+     font-weight: 500;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     padding: 30px;
+     border-radius: 3rem;
+     border-top-right-radius: 0rem;
+     background-color: rgb(243, 228, 219);
+     box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
+     margin: 5px;
+     
+    }
+    .next-img{
+ filter: drop-shadow(
+    1px 5px 10px hsl(218, 4%, 35%)
+  ); 
+  /* object-fit: contain;
+  position: relative;
+  bottom: 10px; */
+    }
+    .next{
+      box-shadow: none;
+      width: 100%;
+      height: 50%;
+      /* margin-right: 50px; */
+      
+    }
+    .back{
+      /* background: none; */
+      background: url(./gifs/blue.gif) no-repeat center;
+      background-size: contain;
+      background-position-y:top;
+    }
+    .my-message{
+      background-color: rgba(241, 241, 237, 0.849);
+    }
+    .message{
+      width: 80%;
+      height: 90%;
+      /* border: 1px solid red; */
+      color:rgb(48, 46, 46);
+      padding: 15px;
+      background-color: rgb(245, 245, 220);
+      border-radius: 1rem;
+      filter: drop-shadow(
+    1px 5px 10px hsl(218, 4%, 35%)
+  ); 
+  font-size: 13px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+
+    }
+    
+    .msg{
+      background-color: white;
+      padding: 20px;
+      border-radius: 1.5rem;
+      border-top-right-radius: 0rem;
+      color: black;
+      box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
+
+    }
+    .paint{
+      /* background-color: rgb(186, 186, 212); */
+      /* background-color: rgb(35, 169, 247); */
+      background-color: rgb(160, 162, 163);
+      color: white;
+      border-top-left-radius: 0rem;
+      border-top-right-radius: 1.5rem;
+      box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
+
+    }
+    .editz{
+      background-color: white;
+   
+    }
+    .edit{
+            background-color: rgb(35, 169, 247);
+
+
+    }
+    .edi{
+      background-color: rgba(208, 226, 238, 0.562);
+
+    }
+   .editor{
+    background: none;
+   }
+  </style>
+</head>
+
+<body>
+
+  <div class="main">
+    <div class="text">
+      <h1>Happy Birthday <br><span>dear varuniii</span> <br>
+
+        <audio id="myAudio" controls autoplay loop ><source src="./images/music.mp3" type="audio/mp3"></audio></h1>
+    </div>
+    <div class="contain">
+      <swiper-container class="mySwiper" effect="cards" grab-cursor="true">
+        <swiper-slide class="bg bt"> <p class="bday">Happy Birthday</p><span>🎉---------miss goddess---------🎉</span><img src="./gifs/kartik-aaryan-dance.gif" alt=""  class="emo"></swiper-slide>
+        <swiper-slide><img src="./images/5(1).jpg" alt=""></swiper-slide>
+        <swiper-slide class="my-message edi editor"><div class="message editz editor"><p class="msg"> Another year older, but hey, who's counting? You're like a fine wine as you are goddess of wine , getting better with age! May your day be filled with laughter, cake , and memories to cherish. Happy Birthday! 🎉 </p> <p class="msg paint edit"> Wishing you more candles to blow. Enjoy your special day with all the fun and laughter you deserve! </p><p class="msg">You're not getting older, you're just increasing in value, like a fine wine ...  oh!! you are already. </p><p class="msg paint edit">all the adventures yet to come. Enjoy every moment, you deserve it!
+
+
+
+
+
+        </p><p class="msg" style="text-align: center;">"HAPPY BIRTHDAAAY" </p> </div></swiper-slide> 
+        <swiper-slide><img src="./images/3(1).jpg" alt=""></swiper-slide>
+        <swiper-slide class="background back"><div class="middle next"><img src="./gifs/nice cake.png" alt="" class="mids next-img"></div><div class="timt">Hey birthday queen! 🎉 Let's make today as sweet as your favorite cake! May your day be filled with layers of happiness, sprinkled with laughter, and frosted with love. Here's to live in every moment and enjoying every delicious slice of life. 
+          <h6 style="text-align: center; padding: 0; margin: 0; margin-top: 10px;">HAPPY BIRTHDAAAY!!!</h6>
+        </div></swiper-slide>
+       
+        <swiper-slide style="background-color: antiquewhite;" class="nexts"><img src="./gifs/happy-birthday-cake.gif" alt="" class="all"> <p class="pickup">As you celebrate another year of life, I hope your heart is filled with warmth, your day is filled with smiles, and your year ahead is filled with endless possibilities. Happy birthday...Varuni</p></swiper-slide>
+        <swiper-slide><img src="./images/4(1).jpg" alt=""></swiper-slide>
+        <swiper-slide><img src="./gifs/Hey (1).gif" alt="" class="new"></swiper-slide>
+        <swiper-slide><img src="./gifs/Hey (2).gif" alt=""></swiper-slide>
+        <swiper-slide class="background"><div class="middle"><img src="./gifs/png moon (1).png" alt="" class="mids"></div><div class="timt">Just like the moon lights up the night sky, you brighten the lives of everyone around you. Your presence is as magical and mesmerizing as a full moon's glow. May your special day be filled with joy and wonder, and may your path always be bathed in moonlight.  <h6 style="text-align: center; padding: 0; margin: 0; margin-top: 10px;">HAPPY BIRTHDAAAY!!!</h6></div></swiper-slide> 
+        <swiper-slide class="my-message"><div class="message"><p class="msg">ahh! so many many returns of the day. </p> <p class="msg paint"> A very happy birthday to youh varuni. </p><p class="msg">Hope you are well and good !!</p><p class="msg paint">And taking care of yourself.</p><p class="msg">But still take care and  blessed.</p> <p class="msg paint">Kahna to bhut kuch hai but.....🤐</p><p class="msg">Happy birthday! Enjoy your special day! </p></div></swiper-slide> 
+
+        <!-- <swiper-slide class="my-message edi"><div class="message editz"><p class="msg">ahh! so many many returns of the day. </p> <p class="msg paint edit"> A very happy birthday to youh varuni. </p><p class="msg">Hope you are well and good !!</p><p class="msg paint edit">Happy birthday! Enjoy your special day!</p><p class="msg">ahh! so happy birthday and hope </p> <p class="msg paint edit">ahh! so happy birthday and hope</p><p class="msg">ahh! so happy birthday and hope </p></div></swiper-slide>  -->
+        
+        
+        
+      
+        <swiper-slide class="bg"><img src="./images/emj.gif" alt="" class="emoji"><span>wish you a very</span> <h1 class="msgs">Happy Birthday</h1></swiper-slide>
+        
+      </swiper-container>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <script>
+    window.onload = function() {
+      var audio = document.getElementById("myAudio");
+      audio.play();
+    };
+  </script>
+ 
+</body>
+
+</html>
